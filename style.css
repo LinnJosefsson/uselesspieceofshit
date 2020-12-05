@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(245, 227, 236);
+  width: 100%;
+  height: 1000vh;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+}
+
+.column {
+  flex: 33.3%;
+}
+
+.column > img {
+  max-width: 120px;
+  display: flex;
+  cursor: pointer;
+  position: absolute;
+  transition: all 1s;
+}
+
+.moon img {
+  width: 100%;
+}
+
+.berlin img {
+  width: 100%;
+}
+
+.beijing img {
+  width: 100%;
+}
