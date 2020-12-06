@@ -3,9 +3,8 @@
 }
 
 body {
-  background-color: rgb(245, 227, 236);
   width: 100%;
-  height: 1000vh;
+  height: 500vh;
 }
 
 .flex {
@@ -17,22 +16,44 @@ body {
   flex: 33.3%;
 }
 
+.test {
+  width: 100vh;
+  height: 100vh;
+  background-color: azure;
+}
+
 .column > img {
   max-width: 120px;
   display: flex;
   cursor: pointer;
   position: absolute;
+  z-index: 99;
   transition: all 1s;
 }
 
-.moon img {
+.vacay img {
+  display: none;
+  object-fit: cover;
+  height: 100vh;
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
-.berlin img {
-  width: 100%;
+.vacation img {
+  display: none;
+  position: fixed;
 }
 
-.beijing img {
-  width: 100%;
+.vacation2 img {
+  display: none;
+  position: fixed;
+}
+
+.vacation3 img {
+  display: none;
+  position: fixed;
 }
