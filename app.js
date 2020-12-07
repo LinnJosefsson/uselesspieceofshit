@@ -80,7 +80,11 @@ window.onload = function () {
     }
 }
 
-*/  
+*/
+
+
+
+///
 
     window.onload = function () {
 	
@@ -92,11 +96,17 @@ window.onload = function () {
 	//gör function av detta
 	dogOne.onclick = function(){
 		
-	  var x = 100;
+	  var x = 0;
 	  var y = 300;
 	  dogOne.style.marginLeft = x + 'px';
 		dogOne.style.marginTop = y + 'px';
-		dogOne.style.position = 'fixed';
+        dogOne.style.position = 'fixed';
+        
+                if (y === 300) {
+            dogOne.onclick = function () {
+                dogOne.style.marginTop = 0;
+            } 
+        }
 		
 		// css left: 40%; transform: translateX(-40%)
 	};
@@ -106,7 +116,14 @@ window.onload = function () {
 		var y = 300;
 		dogTwo.style.marginLeft = x + 'px';
 		dogTwo.style.marginTop = y + 'px';
-		dogTwo.style.position = 'fixed';
+        dogTwo.style.position = 'fixed';
+        
+        if (y === 300) {
+            dogTwo.onclick = function () {
+                dogTwo.style.marginTop = x  + 'px';
+                dogTwo.style.marginLeft = x + 'px';
+            } 
+        }
 		
 		// css left: 50%; transform: translateX(-50%)
 
@@ -115,12 +132,17 @@ window.onload = function () {
 	dogThree.onclick = function () {
 		var x = 550;
 		var y = 300;
-		dogThree.style.marginLeft = 'auto';
-		dogThree.style.marginRight = x + 'px';
+       dogThree.style.translateX = x + '60px';
 		dogThree.style.marginTop = y + 'px';
 		dogThree.style.position = 'fixed';
 		
-		// css left: 60%; transform: translateX(-60%)
+       
+        
+                if (y === 300) {
+            dogThree.onclick = function () {
+                dogThree.style.marginTop = 0;
+            } 
+        }
 	};
 	
 	
@@ -131,13 +153,14 @@ window.onload = function () {
 		"img/beijing.jpg",
 	];
 
+        
 	var i = 0;
 
-	for (i = 0; i < bgImg.length; i++) {
+        for (i = 0; i < bgImg.length; i++) {
 		var div = document.createElement('section');
 		div.classList.add('vacay', 'vacation-' + i);
 		var img = document.createElement('img');
-		img.src = bgImg[i];
+        img.src = bgImg[i];
 		div.appendChild(img);
 		document.body.appendChild(div);
 	}
@@ -150,6 +173,8 @@ window.onload = function () {
 
         if (window.scrollY > 500) {
             document.querySelector('.vacation-0 img').style.display = 'block';
+            document.querySelector('.vacation-0 img').style.width = '100%';
+
         }else{
 			document.querySelector('.vacation-0 img').style.display = 'none';
 		}
@@ -171,4 +196,3 @@ window.onload = function () {
 	});
 
 }
-

@@ -16,12 +16,6 @@ body {
   flex: 33.3%;
 }
 
-.test {
-  width: 100vh;
-  height: 100vh;
-  background-color: azure;
-}
-
 .column > img {
   max-width: 120px;
   display: flex;
@@ -43,7 +37,7 @@ body {
   right: 0;
 }
 
-.vacation img {
+.vacation-0 img {
   display: none;
   position: fixed;
 }
@@ -57,3 +51,5 @@ body {
   display: none;
   position: fixed;
 }
+
+/**/
