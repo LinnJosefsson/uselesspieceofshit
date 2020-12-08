@@ -1,156 +1,102 @@
-/* const dog = document.querySelector('img');
-
-dog.addEventListener('click', function (e){
-    e.style.marginTop = '300px';
-})
 
 
- */
-
-/*
- var dogOne = document.querySelector('.column .dogOne');
-var dogTwo = document.querySelector('.column .dogTwo');
-var dogThree = document.querySelector('.column .dogThree');
-
-
-dogOne.onclick = function(){
-    
-  var x = 100;
-  var y = 300;
-  dogOne.style.marginLeft = x + 'px';
-    dogOne.style.marginTop = y + 'px';
-    dogOne.style.position = 'fixed';
-};
-
-dogTwo.onclick = function () {
-    var x = 0;
-    var y = 300;
-    dogTwo.style.marginLeft = x + 'px';
-    dogTwo.style.marginTop = y + 'px';
-    dogTwo.style.position = 'fixed';
-
-};
-
-dogThree.onclick = function () {
-    var x = 550;
-    var y = 300;
-    dogThree.style.marginRight = x + 'px';
-    dogThree.style.marginTop = y + 'px';
-    dogThree.style.position = 'fixed';
-};
-
-
-
-window.onload = function () {
-    window.onload.addEventListener('scroll', function () {
-
-
-        if (window.scrollY > 100) {
-            document.querySelector('.vacation').style.display = block;
-            
-        }
-        if (window.scrollY > 600) {
-            document.querySelector('.vacation2').style.display = block;
-        }
-        if (window.scrollY > 1200) {
-            document.querySelector('vacation3').style.display = block;
-        }
-    
-
-
-        var bgImg = [
-            "/img/moon.jpg",
-            "/img/berlin.jpg",
-            "/img/beijing.jpg",
-        ];
-
-        var i = 0;
-
-        for (i = 0; i < bgImg.length; i++) {
-            
-            showImg() = function () {
-                var img = document.createElement('img');
-                img.src = bgImg[i];
-                img.classList.add('.vacation');
-                document.body.appendChild(img);
-
-            }
-    
-        }
-    }
-}
-
-*/
-
-
-
-///
 
     window.onload = function () {
 	
 	//lägg till fler i queryselector
 	var dogOne = document.querySelector('.column .dogOne');
 	var dogTwo = document.querySelector('.column .dogTwo');
-	var dogThree = document.querySelector('.column .dogThree');
+        var dogThree = document.querySelector('.column .dogThree');
+        
+
+        dogOne.addEventListener("mouseover", nameOnMouseOver);
+        function nameOnMouseOver() {
+            document.textContent =
+                'Maia med tillhörande boll';
+        
+        } 
 
 	//gör function av detta
-	dogOne.onclick = function(){
-		
-	  var x = 0;
+	dogOne.addEventListener('click', function () {
+      
 	  var y = 300;
-	  dogOne.style.marginLeft = x + 'px';
 		dogOne.style.marginTop = y + 'px';
+	
         dogOne.style.position = 'fixed';
+        dogOne.style.width = '300' + 'px';
+		dogOne.style.transform = 'translateX(50%)';
+		dogOne.style.transition = 'width 2s';
         
                 if (y === 300) {
             dogOne.onclick = function () {
                 dogOne.style.marginTop = 0;
+                dogOne.style.width = '120' + 'px';
             } 
-        }
+                }
+        
+        
 		
 		// css left: 40%; transform: translateX(-40%)
-	};
+	});
 
-	dogTwo.onclick = function () {
-		var x = 0;
-		var y = 300;
-		dogTwo.style.marginLeft = x + 'px';
+	dogTwo.addEventListener('click', function () {
+		var y = 360;
+        var x = 0;
 		dogTwo.style.marginTop = y + 'px';
         dogTwo.style.position = 'fixed';
+        dogTwo.style.width = y + 'px';
+		dogTwo.style.transition = 'width 2s';
         
-        if (y === 300) {
+        if (y === 360) {
             dogTwo.onclick = function () {
                 dogTwo.style.marginTop = x  + 'px';
                 dogTwo.style.marginLeft = x + 'px';
+                dogTwo.style.width = '120' + 'px';
             } 
         }
 		
 		// css left: 50%; transform: translateX(-50%)
 
-	};
+	});
 
-	dogThree.onclick = function () {
-		var x = 550;
-		var y = 300;
-       dogThree.style.translateX = x + '60px';
+	dogThree.addEventListener('click', function () {
+		/* var x = 10; */
+		var y = 250;
 		dogThree.style.marginTop = y + 'px';
 		dogThree.style.position = 'fixed';
+		dogThree.style.width = '200' + 'px';
+		dogThree.style.transform = 'translateX(-60%)';
+        dogThree.style.transition = 'width 2s';
+
+       /*  function bigScreen(size) {
+            
+            if (bigScreen.matches) {
+                document.style. = 
+
+            )} */
+    
 		
        
         
-                if (y === 300) {
-            dogThree.onclick = function () {
+                if (y === 250) {
+                    dogThree.onclick = function () {
+                dogThree.style.right = '30' + 'px';
                 dogThree.style.marginTop = 0;
+                dogThree.style.width = '120' + 'px';
             } 
         }
-	};
+    });
+        
+    
+    
+        
 	
 	
 
 	var bgImg = [
-		"img/moon.jpg",
+		"img/mooniebig.jpg",
 		"img/berlin.jpg",
-		"img/beijing.jpg",
+		"img/hiroshimabig.jpeg",
 	];
 
         
@@ -171,26 +117,24 @@ window.onload = function () {
 		// Scrollar upp? -> göm bilder
 		// Scrollar förbi första bilder - göm den, visa nästa
 
-        if (window.scrollY > 500) {
+        if (window.scrollY > 500  && window.scrollY < 1500) {
             document.querySelector('.vacation-0 img').style.display = 'block';
-            document.querySelector('.vacation-0 img').style.width = '100%';
-
         }else{
 			document.querySelector('.vacation-0 img').style.display = 'none';
 		}
-        if (window.scrollY > 1500) {
+        if (window.scrollY > 1500 && window.scrollY < 2000) {
             document.querySelector('.vacation-1 img').style.display = 'block';
         } else {
-            document.querySelector('.vacation-2 img').style.display = 'none';
+            document.querySelector('.vacation-1 img').style.display = 'none';
         }
-        if (window.scrollY > 2000) {
+        if (window.scrollY > 2000 && window.scrollY < 3000) {
             document.querySelector('.vacation-2 img').style.display = 'block';
         } else {
             document.querySelector('.vacation-2 img').style.display = 'none';
         }
-        if (window.scrollY < 200) {
+      /*   if (window.scrollY < 100) {
             document.querySelector('.vacation-1 img').style.display = 'none';
-        }
+        } */
     
 
 	});
