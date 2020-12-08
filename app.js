@@ -24,7 +24,7 @@
 	
         dogOne.style.position = 'fixed';
         dogOne.style.width = '300' + 'px';
-		dogOne.style.transform = 'translateX(50%)';
+		dogOne.style.transform = 'translateX(30%)';
 		dogOne.style.transition = 'width 2s';
         
                 if (y === 300) {
@@ -44,7 +44,7 @@
         var x = 0;
 		dogTwo.style.marginTop = y + 'px';
         dogTwo.style.position = 'fixed';
-        dogTwo.style.width = y + 'px';
+        dogTwo.style.width = '280' + 'px';
 		dogTwo.style.transition = 'width 2s';
         
         if (y === 360) {
@@ -61,7 +61,8 @@
 
 	dogThree.addEventListener('click', function () {
 		/* var x = 10; */
-		var y = 250;
+        var y = 250;
+        var x = 0;
 		dogThree.style.marginTop = y + 'px';
 		dogThree.style.position = 'fixed';
 		dogThree.style.width = '200' + 'px';
@@ -80,8 +81,8 @@
         
                 if (y === 250) {
                     dogThree.onclick = function () {
-                dogThree.style.right = '30' + 'px';
-                dogThree.style.marginTop = 0;
+                dogThree.style.left = '260' + 'px';
+                dogThree.style.marginTop = '0';
                 dogThree.style.width = '120' + 'px';
             } 
         }
