@@ -1,16 +1,32 @@
+:root {
+  --font-color: rgb(36, 33, 33);
+  --font-family: "Cinzel", serif;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  width: 100%;
   height: 500vh;
-  background-color: rgb(108, 108, 108);
+  background-color: rgb(225, 181, 181);
+}
+
+.first {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  font-size: 1rem;
+  color: var(--font-color);
+  font-family: var(--font-family);
 }
 
 .nav {
   display: flex;
   margin: 0 auto;
+  border-radius: 3%;
+  border: 3px solid rgba(249, 195, 195, 0.5);
   width: 90%;
   height: 120px;
   padding: 10px;
@@ -29,7 +45,7 @@ body {
   display: flex;
   cursor: pointer;
   position: absolute;
-  z-index: 99;
+  z-index: 98;
 }
 
 .vacay img {
@@ -47,14 +63,35 @@ body {
 .vacation-0 img {
   display: none;
   position: fixed;
+  object-fit: cover;
 }
 
-.vacation2 img {
+.vacation-1 img {
   display: none;
   position: fixed;
+  object-fit: cover;
 }
 
-.vacation3 img {
+.vacation-2 img {
   display: none;
   position: fixed;
+  object-fit: cover;
+}
+
+.the-future {
+  font-family: black;
+  width: 150px;
+  background-color: rgb(238, 235, 235, 0.8);
+  height: 240px;
+  border: 5px solid rgba(28, 27, 27, 0.5);
+  margin-top: 420vh;
+  font-family: var(--font-family);
+  color: var(--font-color);
+  text-align: center;
+  z-index: 99;
+  padding: 3px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

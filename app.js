@@ -19,7 +19,7 @@ window.onload = function () {
     //gör function av detta
     dogOne.addEventListener('click', function () {
       
-        var y = 300;
+        var y = 220;
         dogOne.style.marginTop = y + 'px';
 	
         dogOne.style.position = 'fixed';
@@ -27,12 +27,18 @@ window.onload = function () {
         dogOne.style.transform = 'translateX(30%)';
         dogOne.style.transition = 'width 2s';
         
-        if (y === 300) {
+        if (y === 220) {
             dogOne.onclick = function () {
                 dogOne.style.position = 'absolute';
                 dogOne.style.marginTop = 0;
                 dogOne.style.width = '120' + 'px';
             }
+        }
+
+        var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+        if (viewportWidth > 640) {
+            dogOne.style.transform = 'translateX(100%)';
+
         }
         
         
@@ -41,14 +47,14 @@ window.onload = function () {
     });
 
     dogTwo.addEventListener('click', function () {
-        var y = 360;
+        var y = 280;
         var x = 0;
         dogTwo.style.marginTop = y + 'px';
         dogTwo.style.position = 'fixed';
         dogTwo.style.width = '280' + 'px';
         dogTwo.style.transition = 'width 2s';
         
-        if (y === 360) {
+        if (y === 280) {
             dogTwo.onclick = function () {
                 dogTwo.style.position = 'absolute';
                 dogTwo.style.marginTop = x + 'px';
@@ -63,23 +69,26 @@ window.onload = function () {
 
     dogThree.addEventListener('click', function () {
         /* var x = 10; */
-        var y = 250;
+        var y = 240;
         var x = 0;
         dogThree.style.marginTop = y + 'px';
         dogThree.style.position = 'fixed';
         dogThree.style.width = '200' + 'px';
-        dogThree.style.transform = 'translateX(-60%)';
+        dogThree.style.transform = 'translateX(-50%)';
         dogThree.style.transition = 'width 2s';
 
         
-        if (y === 250) {
+        if (y === 240) {
             dogThree.onclick = function () {
                 dogThree.style.position = 'absolute';
-                dogThree.style.left = '860' + 'px';
                 dogThree.style.marginTop = '0';
                 dogThree.style.width = '120' + 'px';
+
+
                         
             }
+
+            
         }
     });
         
@@ -105,6 +114,7 @@ window.onload = function () {
         img.src = bgImg[i];
         div.appendChild(img);
         document.body.appendChild(div);
+        
     }
 			
 			
@@ -125,17 +135,41 @@ window.onload = function () {
         }
         if (window.scrollY > 2000 && window.scrollY < 3000) {
             document.querySelector('.vacation-2 img').style.display = 'block';
-        } else {
+        }
+
+        
+        
+        
+        else {
             document.querySelector('.vacation-2 img').style.display = 'none';
         }
         /*   if (window.scrollY < 100) {
               document.querySelector('.vacation-1 img').style.display = 'none';
           } */
-        window.addEventListener('keypress', function (event) {
-            if(//nånting keypress 38)
-            window.style.translateY = '0';
- /*  console.log("You've pressed the key:", event.key); */
-});
-
+      
     });
+	
+	
+  	window.addEventListener('keypress', function (event) {
+		if(event.keyCode == 32){ // space
+			event.preventDefault();
+			document.body.scrollTop = 0; // For Safari
+			document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+		}
+	});
 }
+
+        
+/* window.addEventListener("scroll", function (e) {
+    if (window.scrollY === 2000) {
+        const goBack = document.querySelector('.the-future h2')
+        goBack.textContent = 'Want to go back to the future? Hit your Space-key';
+            
+    }
+}); */
+
+
+
+   
+    /*  const goBack = document.querySelector('section .the-future h2')
+    goBack.textContent = 'Want to go back to the future? Hit your Space-key'; */

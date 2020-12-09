@@ -20,3 +20,15 @@
     margin: 0 auto;
   }
 }
+@media screen and (max-width: 400px) {
+  .first {
+    font-size: 0.6rem;
+  }
+}
+@media screen and (min-width: 800px) {
+.the-future {
+
+  left: 300px;
+  width: 255px;
+  height: 230px;
+}
