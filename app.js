@@ -28,7 +28,8 @@
 		dogOne.style.transition = 'width 2s';
         
                 if (y === 300) {
-            dogOne.onclick = function () {
+                    dogOne.onclick = function () {
+                dogOne.style.position = 'absolute';
                 dogOne.style.marginTop = 0;
                 dogOne.style.width = '120' + 'px';
             } 
@@ -49,6 +50,7 @@
         
         if (y === 360) {
             dogTwo.onclick = function () {
+                dogTwo.style.position = 'absolute';
                 dogTwo.style.marginTop = x  + 'px';
                 dogTwo.style.marginLeft = x + 'px';
                 dogTwo.style.width = '120' + 'px';
@@ -69,21 +71,14 @@
 		dogThree.style.transform = 'translateX(-60%)';
         dogThree.style.transition = 'width 2s';
 
-       /*  function bigScreen(size) {
-            
-            if (bigScreen.matches) {
-                document.style. = 
-
-            )} */
-    
-		
-       
         
                 if (y === 250) {
                     dogThree.onclick = function () {
-                dogThree.style.left = '260' + 'px';
+                        dogThree.style.position = 'absolute';
+                dogThree.style.left = '860' + 'px';
                 dogThree.style.marginTop = '0';
-                dogThree.style.width = '120' + 'px';
+                        dogThree.style.width = '120' + 'px';
+                        
             } 
         }
     });
