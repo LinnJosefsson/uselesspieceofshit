@@ -7,14 +7,11 @@ window.onload = function () {
     var dogOne = document.querySelector('.column .dogOne');
     var dogTwo = document.querySelector('.column .dogTwo');
     var dogThree = document.querySelector('.column .dogThree');
-        
+     
 
-    dogOne.addEventListener("mouseover", nameOnMouseOver);
-    function nameOnMouseOver() {
-        document.textContent =
-            'Maia med tillhörande boll';
+
         
-    }
+    
 
     //gör function av detta
     dogOne.addEventListener('click', function () {
@@ -37,13 +34,12 @@ window.onload = function () {
 
         var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
         if (viewportWidth > 640) {
-            dogOne.style.transform = 'translateX(100%)';
-
+            dogOne.style.transform = 'translateX(110%)';
         }
+        if (viewportWidth < 639) 
+            dogOne.style.transform = 'translateX(30%)';
         
-        
-		
-        // css left: 40%; transform: translateX(-40%)
+
     });
 
     dogTwo.addEventListener('click', function () {
@@ -62,8 +58,6 @@ window.onload = function () {
                 dogTwo.style.width = '120' + 'px';
             }
         }
-		
-        // css left: 50%; transform: translateX(-50%)
 
     });
 
@@ -92,11 +86,6 @@ window.onload = function () {
         }
     });
         
-    
-    
-        
-	
-	
 
     var bgImg = [
         "img/mooniebig.jpg",
@@ -136,16 +125,11 @@ window.onload = function () {
         if (window.scrollY > 2000 && window.scrollY < 3000) {
             document.querySelector('.vacation-2 img').style.display = 'block';
         }
-
-        
-        
-        
+ 
         else {
             document.querySelector('.vacation-2 img').style.display = 'none';
         }
-        /*   if (window.scrollY < 100) {
-              document.querySelector('.vacation-1 img').style.display = 'none';
-          } */
+     
       
     });
 	
@@ -160,16 +144,3 @@ window.onload = function () {
 }
 
         
-/* window.addEventListener("scroll", function (e) {
-    if (window.scrollY === 2000) {
-        const goBack = document.querySelector('.the-future h2')
-        goBack.textContent = 'Want to go back to the future? Hit your Space-key';
-            
-    }
-}); */
-
-
-
-   
-    /*  const goBack = document.querySelector('section .the-future h2')
-    goBack.textContent = 'Want to go back to the future? Hit your Space-key'; */
