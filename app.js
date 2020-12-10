@@ -4,9 +4,9 @@
 window.onload = function () {
 	
     //lägg till fler i queryselector
-    var dogOne = document.querySelector('.column .dogOne');
-    var dogTwo = document.querySelector('.column .dogTwo');
-    var dogThree = document.querySelector('.column .dogThree');
+    const dogOne = document.querySelector('.column .dogOne');
+    const dogTwo = document.querySelector('.column .dogTwo');
+    const dogThree = document.querySelector('.column .dogThree');
      
 
 
@@ -16,7 +16,7 @@ window.onload = function () {
     //gör function av detta
     dogOne.addEventListener('click', function () {
       
-        var y = 220;
+        const y = 220;
         dogOne.style.marginTop = y + 'px';
 	
         dogOne.style.position = 'fixed';
@@ -32,7 +32,7 @@ window.onload = function () {
             }
         }
 
-        var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+        const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
         if (viewportWidth > 640) {
             dogOne.style.transform = 'translateX(110%)';
         }
@@ -43,8 +43,8 @@ window.onload = function () {
     });
 
     dogTwo.addEventListener('click', function () {
-        var y = 280;
-        var x = 0;
+        const y = 280;
+        const x = 0;
         dogTwo.style.marginTop = y + 'px';
         dogTwo.style.position = 'fixed';
         dogTwo.style.width = '280' + 'px';
@@ -62,9 +62,9 @@ window.onload = function () {
     });
 
     dogThree.addEventListener('click', function () {
-        /* var x = 10; */
-        var y = 240;
-        var x = 0;
+        
+        const y = 240;
+        const x = 0;
         dogThree.style.marginTop = y + 'px';
         dogThree.style.position = 'fixed';
         dogThree.style.width = '200' + 'px';
@@ -76,18 +76,21 @@ window.onload = function () {
             dogThree.onclick = function () {
                 dogThree.style.position = 'absolute';
                 dogThree.style.marginTop = '0';
-                dogThree.style.width = '120' + 'px';
-
-
+                dogThree.style.width = '120' + 'px'; 
                         
-            }
-
-            
+            }  
         }
+
+        const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+        if (viewportWidth > 640) {
+            dogThree.style.transform = 'translateX(-150%)';
+        }
+        if (viewportWidth < 639) 
+            dogThree.style.transform = 'translateX(-50%)';
     });
         
 
-    var bgImg = [
+    const bgImg = [
         "img/mooniebig.jpg",
         "img/berlin.jpg",
         "img/hiroshimabig.jpeg",
@@ -97,9 +100,9 @@ window.onload = function () {
     var i = 0;
 
     for (i = 0; i < bgImg.length; i++) {
-        var div = document.createElement('section');
+        const div = document.createElement('section');
         div.classList.add('vacay', 'vacation-' + i);
-        var img = document.createElement('img');
+        const img = document.createElement('img');
         img.src = bgImg[i];
         div.appendChild(img);
         document.body.appendChild(div);
@@ -133,14 +136,14 @@ window.onload = function () {
       
     });
 	
-	
-  	window.addEventListener('keypress', function (event) {
-		if(event.keyCode == 32){ // space
+}
+
+window.addEventListener('keypress', function (event) {
+    console.log(event.code);
+		if(event.code == 'Space'){ // space
 			event.preventDefault();
 			document.body.scrollTop = 0; // For Safari
 			document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 		}
 	});
-}
-
         

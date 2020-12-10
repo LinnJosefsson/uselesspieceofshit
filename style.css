@@ -1,10 +1,12 @@
 :root {
   --font-color: rgb(36, 33, 33);
-  --font-family: @font-face {
-    font-family: "Cinzel";
-    src: local("Cinzel"),
-      url("/fonts/Cinzel-VariableFont_wght.woff") format("woff");
-  }
+  --font-family: "font";
+}
+
+@font-face {
+  font-family: "font";
+  src: local("Cinzel"),
+    url("/fonts/Cinzel-VariableFont_wght.woff") format("woff");
 }
 
 * {
@@ -16,13 +18,17 @@ body {
   background-color: rgb(225, 181, 181);
 }
 
+h1 {
+  font-size: 1.3rem;
+}
+
 .first,
 .information h2 {
   display: flex;
   align-items: center;
   text-align: center;
   flex-direction: column;
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: var(--font-color);
   font-family: var(--font-family);
 }
