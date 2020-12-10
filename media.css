@@ -27,10 +27,12 @@
   }
 }
 @media screen and (min-width: 800px) {
-.the-future {
-  margin-top: 370vh;
-  font-size: .8rem;
-  left: 220px;
-  width: 280px;
-  height: 100px;
+  .the-future {
+    margin-top: 370vh;
+    font-size: 0.8rem;
+    left: 220px;
+    width: 360px;
+    height: 100px;
+    left: 10px;
+  }
 }

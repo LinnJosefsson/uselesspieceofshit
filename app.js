@@ -47,7 +47,7 @@ window.onload = function () {
         const x = 0;
         dogTwo.style.marginTop = y + 'px';
         dogTwo.style.position = 'fixed';
-        dogTwo.style.width = '280' + 'px';
+        dogTwo.style.width = '240' + 'px';
         dogTwo.style.transition = 'width 2s';
         
         if (y === 280) {
@@ -139,11 +139,19 @@ window.onload = function () {
 }
 
 window.addEventListener('keypress', function (event) {
-    console.log(event.code);
-		if(event.code == 'Space'){ // space
+		if(event.code == 'Space'){ 
 			event.preventDefault();
 			document.body.scrollTop = 0; // For Safari
 			document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 		}
-	});
+});
+    
+
         
+const goBack = document.querySelector('.the-future');
+
+goBack.addEventListener('click', function (event) {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+		
+})
