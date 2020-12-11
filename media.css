@@ -30,9 +30,15 @@
   .the-future {
     margin-top: 370vh;
     font-size: 0.8rem;
-    left: 220px;
+    margin-left: 20px;
     width: 360px;
     height: 100px;
     left: 10px;
   }
 }
+@media screen and (min-width: 800px) {
+  .dogOneStyle {
+    transform: translateX(150%);
+    /* margin-top: 400px; */
+  }
+ 
