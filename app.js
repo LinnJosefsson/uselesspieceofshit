@@ -6,20 +6,18 @@ window.onload = function () {
     const dogThree = document.querySelector('.column .dogThree');
    
     dogOne.addEventListener('click', function () {
-        const y = 220;
-
-        dogOne.classList.add('dogOneStyle');
-    
-        if (y === 220) {
-            dogOne.onclick = function () {
-                dogOne.classList.remove('dogOneStyle');
-            }
-        }
+		
+		if (dogOne.classList.contains('dogOneStyle')) {
+			dogOne.classList.remove('dogOneStyle');
+			console.log("remove class")
+		}else{
+			dogOne.classList.add('dogOneStyle');
+			console.log("add class")  
+		} 
     });
 
     dogTwo.addEventListener('click', function () {
-        const y = 280;
-        dogTwo.classList.add('dogTwoStyle');
+        dogTwo.classList.contains('dogTwoStyle');
       
         if (y === 280) {
             dogTwo.onclick = function () {
@@ -57,22 +55,23 @@ window.onload = function () {
     }
 					
     window.addEventListener("scroll", function (e) {
-        if (window.scrollY > 500 && window.scrollY < 1500) {
-            document.querySelector('.vacation-0 img').style.display = 'block';
+        if (window.scrollY > 300 && window.scrollY < 800) {
+            document.querySelector('.vacation-0 img').style.opacity = '1';
         } else {
-            document.querySelector('.vacation-0 img').style.display = 'none';
+            document.querySelector('.vacation-0 img').style.opacity = '0';
         }
-        if (window.scrollY > 1500 && window.scrollY < 2000) {
-            document.querySelector('.vacation-1 img').style.display = 'block';
+        if (window.scrollY > 800 && window.scrollY < 1300) {
+            document.querySelector('.vacation-1 img').style.opacity = '1';
         } else {
-            document.querySelector('.vacation-1 img').style.display = 'none';
+            document.querySelector('.vacation-1 img').style.opacity = '0';
         }
-        if (window.scrollY > 2000 && window.scrollY < 3000) {
-            document.querySelector('.vacation-2 img').style.display = 'block';
+        if (window.scrollY > 1300 && window.scrollY < 1800) {
+            document.querySelector('.vacation-2 img').style.opacity = '1';
+            document.querySelector('.the-future').style.display = 'block';
         }
  
         else {
-            document.querySelector('.vacation-2 img').style.display = 'none';
+            document.querySelector('.vacation-2 img').style.opacity = '0';
         }
      });
 }
