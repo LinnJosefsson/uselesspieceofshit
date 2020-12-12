@@ -9,38 +9,31 @@ window.onload = function () {
 		
 		if (dogOne.classList.contains('dogOneStyle')) {
 			dogOne.classList.remove('dogOneStyle');
-			console.log("remove class")
 		}else{
 			dogOne.classList.add('dogOneStyle');
-			console.log("add class")  
 		} 
     });
 
     dogTwo.addEventListener('click', function () {
-        dogTwo.classList.contains('dogTwoStyle');
-      
-        if (y === 280) {
-            dogTwo.onclick = function () {
-                dogTwo.classList.remove('dogTwoStyle');
-            }
-        }
+        	if (dogTwo.classList.contains('dogTwoStyle')) {
+			dogTwo.classList.remove('dogTwoStyle');
+		}else{
+			dogTwo.classList.add('dogTwoStyle');
+		} 
     });
 
     dogThree.addEventListener('click', function () {
-        dogThree.classList.add('dogThreeStyle');
-        const y = 200;
-
-        if (y === 200) {
-            dogThree.onclick = function () {
-                dogThree.classList.remove('dogThreeStyle');
-            }  
-        }
+        	if (dogThree.classList.contains('dogThreeStyle')) {
+			dogThree.classList.remove('dogThreeStyle');
+		}else{
+			dogThree.classList.add('dogThreeStyle');
+		} 
     });
         
     const bgImg = [
         "img/mooniebig.jpg",
         "img/berlin.jpg",
-        "img/hiroshimabig.jpeg",
+        "img/hiroshima2.png",
     ];
 
     var i = 0;
@@ -65,7 +58,7 @@ window.onload = function () {
         } else {
             document.querySelector('.vacation-1 img').style.opacity = '0';
         }
-        if (window.scrollY > 1300 && window.scrollY < 1800) {
+        if (window.scrollY > 1300 && window.scrollY < 2100) {
             document.querySelector('.vacation-2 img').style.opacity = '1';
             document.querySelector('.the-future').style.display = 'block';
         }

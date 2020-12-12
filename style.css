@@ -23,7 +23,7 @@ h1 {
   font-size: var(--font-size);
 }
 
-.first,
+.headline,
 .information h2 {
   display: flex;
   align-items: center;
@@ -59,7 +59,7 @@ h1 {
 .dogTwo,
 .dogThree {
   transition: all 2s;
-  width: 100px;
+  width: 110px;
 }
 
 .dogOneStyle {
@@ -116,6 +116,7 @@ h1 {
 
 .the-future {
   font-family: black;
+  display: flex;
   width: 280px;
   height: 70px;
   background-color: rgb(238, 235, 235, 0.8);
