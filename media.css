@@ -41,4 +41,10 @@
     transform: translateX(150%);
     /* margin-top: 400px; */
   }
- 
+}
+
+@media screen and (min-width: 600px) {
+  .dogThreeStyle {
+    transform: translateX(-150%);
+  }
+}

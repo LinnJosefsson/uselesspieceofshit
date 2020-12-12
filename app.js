@@ -62,12 +62,12 @@ window.onload = function () {
             }  
         }
 
-        const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+       /*  const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
         if (viewportWidth > 640) {
             dogThree.style.transform = 'translateX(-150%)';
         }
         if (viewportWidth < 639) 
-            dogThree.style.transform = 'translateX(-50%)';
+            dogThree.style.transform = 'translateX(-50%)'; */
     });
         
 
