@@ -37,14 +37,12 @@ window.onload = function () {
 
     dogTwo.addEventListener('click', function () {
         const y = 280;
-        const x = 0;
         dogTwo.classList.add('dogTwoStyle');
       
         
         if (y === 280) {
             dogTwo.onclick = function () {
                 dogTwo.classList.remove('dogTwoStyle');
-             
             }
         }
 
@@ -58,6 +56,7 @@ window.onload = function () {
         if (y === 200) {
             dogThree.onclick = function () {
                 dogThree.classList.remove('dogThreeStyle');
+                
                
             }  
         }
