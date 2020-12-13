@@ -1,7 +1,7 @@
 # uselesspieceofshit
 
 
-#Time Travel Machine<
+#Time Travel Machine
 <p>by Linn</p>
 
 [Click here to pick a furry friend of your choice and travel through space and
