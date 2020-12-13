@@ -32,7 +32,7 @@ window.onload = function () {
         
     const bgImg = [
         "img/mooniebig.jpg",
-        "img/berlin.jpg",
+        "img/mlk.jpg",
         "img/hiroshima.png",
     ];
 
