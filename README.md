@@ -1,6 +1,5 @@
 # uselesspieceofshit
 
-```html
 <h1>Time Travel Machine</h1>
 <p>by Linn</p>
 
@@ -14,4 +13,3 @@ time](https://adoring-cori-4e0432.netlify.app/)
   <li>Ida</li>
   <li>Everyone I've ever known</li>
 </ul>
-```
