@@ -4,10 +4,8 @@
 <h1>Time Travel Machine</h1>
 <p>by Linn</p>
 
-<a href="https://adoring-cori-4e0432.netlify.app/"
-  >Click here to pick a furry friend of your choice and travel through space and
-  time</a
->
+[Click here to pick a furry friend of your choice and travel through space and
+time](https://adoring-cori-4e0432.netlify.app/)
 
 <b>Testers:</b>
 
